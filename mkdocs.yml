@@ -1,8 +1,30 @@
+---
+
 site_name: Owen's Blog
-site_url: https://owenlamont.github.io/blog/
+site_url: https://owenlamont.github.io/home/
 
 theme:
   name: material
 
 plugins:
+  - blog
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
   - social
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/owenlamont
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCYoZjpdGVH2X1MBgRD71lHw
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@owenrlamont
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/owen-lamont/
