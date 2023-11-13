@@ -1,1 +1,8 @@
-site_name: My Docs
+site_name: Owen's Blog
+site_url: https://owenlamont.github.io/blog/
+
+theme:
+  name: material
+
+plugins:
+  - social
