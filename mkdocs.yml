@@ -5,6 +5,7 @@ site_url: https://owenlamont.github.io/home/
 
 theme:
   name: material
+  custom_dir: overrides
 
 plugins:
   - blog
