@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://owenlamont.github.io/blog/</loc>
+         <loc>https://owenlamont.github.io/home/</loc>
+         <lastmod>2023-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/</loc>
+         <lastmod>2023-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/2020/09/19/python-conda-environments-the-sharp-edges-and-how-to-avoid-them/</loc>
+         <lastmod>2023-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/archive/2020/</loc>
+         <lastmod>2023-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/category/conda/</loc>
+         <lastmod>2023-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/category/virtual-environments/</loc>
          <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
