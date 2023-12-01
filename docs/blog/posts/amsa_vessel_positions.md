@@ -8,6 +8,12 @@ date: 2023-11-20
 ---
 # Plotting Maritime Vessel Positions
 
+### Heatmap of log scaled ship positions for over a decade
+
+![Martime Vessel Position Heatmap](../../img/ship_movement_heatmap_2048_1536_kbc.webp)
+
+### One frame of the ship movement animation
+
 ![Maritime Vessel Positions](../../img/amsa_vessel_locations.webp)
 
 The Australian Maritime Safety Authority [Digital Data website](https://www.operations.amsa.gov.au/Spatial/DataServices/DigitalData) has maritime vessel positions dating back over two decades. I love working with data that has a spatial and visual component as this sort of data is fun to visualise and easy to understand.
