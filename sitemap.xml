@@ -2,72 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://owenlamont.github.io/home/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/2023/11/20/plotting-australian-maritime-safety-authority-vessel-positions/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
-         <loc>https://owenlamont.github.io/home/blog/2020/09/19/python-conda-environments-the-sharp-edges-and-how-to-avoid-them/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://owenlamont.github.io/home/blog/2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/2024/12/29/testing-a-python-package-on-github/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/archive/2024/</loc>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/archive/2023/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/archive/2020/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/category/github-actions/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/category/python-package/</loc>
+         <lastmod>2024-12-29</lastmod>
+    </url>
+    <url>
+         <loc>https://owenlamont.github.io/home/blog/category/pytest/</loc>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/maritime/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/data-visualisation/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/python/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/matplotlib/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/geopandas/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/movingpandas/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/conda/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
     <url>
          <loc>https://owenlamont.github.io/home/blog/category/virtual-environments/</loc>
-         <lastmod>2023-12-01</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2024-12-29</lastmod>
     </url>
 </urlset>

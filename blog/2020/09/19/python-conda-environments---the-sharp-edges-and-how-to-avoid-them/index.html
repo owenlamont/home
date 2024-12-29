@@ -6,33 +6,33 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Lessons learnt from wrangling Conda environments.">
       
       
-        <link rel="canonical" href="https://owenlamont.github.io/home/blog/">
+      
+        <link rel="canonical" href="https://owenlamont.github.io/home/blog/2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/">
       
       
-        <link rel="prev" href="..">
+      
+        <link rel="next" href="../../../../2023/11/20/plotting-australian-maritime-safety-authority-vessel-positions/">
       
       
-        <link rel="next" href="category/conda/">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
-      
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
-      
-      <link rel="icon" href="../img/favicon.ico">
+      <link rel="icon" href="../../../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Blog - Owen's Home</title>
+        <title>Python Conda environments - The Sharp Edges and How to Avoid Them - Owen's Home</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -60,11 +60,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Blog - Owen's Home" >
+        <meta  property="og:title"  content="Python Conda environments - The Sharp Edges and How to Avoid Them - Owen's Home" >
       
-        <meta  property="og:description"  content="None" >
+        <meta  property="og:description"  content="Lessons learnt from wrangling Conda environments." >
       
-        <meta  property="og:image"  content="https://owenlamont.github.io/home/assets/images/social/blog/index.png" >
+        <meta  property="og:image"  content="https://owenlamont.github.io/home/assets/images/social/blog/posts/conda-environments-post.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -72,15 +72,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://owenlamont.github.io/home/blog/" >
+        <meta  property="og:url"  content="https://owenlamont.github.io/home/blog/2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Blog - Owen's Home" >
+        <meta  name="twitter:title"  content="Python Conda environments - The Sharp Edges and How to Avoid Them - Owen's Home" >
       
-        <meta  name="twitter:description"  content="None" >
+        <meta  name="twitter:description"  content="Lessons learnt from wrangling Conda environments." >
       
-        <meta  name="twitter:image"  content="https://owenlamont.github.io/home/assets/images/social/blog/index.png" >
+        <meta  name="twitter:image"  content="https://owenlamont.github.io/home/assets/images/social/blog/posts/conda-environments-post.png" >
       
     
     
@@ -103,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#conda-is-awesome" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Owen&#39;s Home" class="md-header__button md-logo" aria-label="Owen's Home" data-md-component="logo">
+    <a href="../../../../.." title="Owen&#39;s Home" class="md-header__button md-logo" aria-label="Owen's Home" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -139,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              Python Conda environments - The Sharp Edges and How to Avoid Them
             
           </span>
         </div>
@@ -194,7 +194,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -203,7 +205,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Owen&#39;s Home" class="md-nav__button md-logo" aria-label="Owen's Home" data-md-component="logo">
+    <a href="../../../../.." title="Owen&#39;s Home" class="md-nav__button md-logo" aria-label="Owen's Home" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -221,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,19 +281,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -300,7 +293,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -350,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive/2024/" class="md-nav__link">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive/2023/" class="md-nav__link">
+      <a href="../../../../archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -396,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="archive/2020/" class="md-nav__link">
+      <a href="../../../../archive/2020/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/conda/" class="md-nav__link">
+      <a href="../../../../category/conda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/data-visualisation/" class="md-nav__link">
+      <a href="../../../../category/data-visualisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/geopandas/" class="md-nav__link">
+      <a href="../../../../category/geopandas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/github-actions/" class="md-nav__link">
+      <a href="../../../../category/github-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -554,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/maritime/" class="md-nav__link">
+      <a href="../../../../category/maritime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/matplotlib/" class="md-nav__link">
+      <a href="../../../../category/matplotlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/movingpandas/" class="md-nav__link">
+      <a href="../../../../category/movingpandas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/pytest/" class="md-nav__link">
+      <a href="../../../../category/pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/python/" class="md-nav__link">
+      <a href="../../../../category/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/python-package/" class="md-nav__link">
+      <a href="../../../../category/python-package/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -692,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="category/virtual-environments/" class="md-nav__link">
+      <a href="../../../../category/virtual-environments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,6 +721,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -738,8 +732,176 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conda-is-awesome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda is awesome
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#but-conda-can-still-burn-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      But Conda can still burn you
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#even-with-best-practises-conda-environments-will-break-anyway-but-much-less-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      Even with best practises Conda environments will break anyway (but much less often)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Even with best practises Conda environments will break anyway (but much less often)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#record-your-environment-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Record your environment configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restoring-a-broken-conda-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restoring a broken Conda environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinning-and-installing-a-specific-package-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pinning and installing a specific package version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-to-make-conda-environments-break-less-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips to make Conda Environments break less often
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips to make Conda Environments break less often">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keep-your-environments-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep your environments simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-channel-priority-strict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable channel priority strict
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-things-to-be-wary-of-with-conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other things to be wary of with Conda
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other things to be wary of with Conda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mixing-pip-and-conda-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mixing Pip and Conda packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-permissions-on-the-working-directory-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write permissions on the working directory on Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dll-hell-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      DLL hell on Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-path-directly-to-a-conda-environment-on-windows-dont-do-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Path directly to a Conda environment on Windows (Don't do this!)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -748,415 +910,80 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="blog">Blog</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-12-29 00:00:00+00:00">December 29, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
             
-              <a href="category/github-actions/" class="md-meta__link">GitHub Actions</a>, 
-              <a href="category/python-package/" class="md-meta__link">Python Package</a>, 
-              <a href="category/pytest/" class="md-meta__link">Pytest</a></li>
-        
-        
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2020-09-19 00:00:00+00:00" class="md-ellipsis">September 19, 2020</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/conda/">Conda</a>, 
+                              <a href="../../../../category/virtual-environments/">Virtual Environments</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              11 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              9 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="testing-a-python-package-on-github"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/">Testing a Python Package on GitHub</a></h2>
-<h3 id="testing-a-python-package-on-github_1"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#testing-a-python-package-on-github_1">Testing a Python Package on GitHub</a></h3>
-<p>I'm quite new both to building Python packages and also to GitHub actions so here I
-describe setting up a workflow to run tests on a Python package across Windows, Ubuntu,
-and macOS and across multiple Python versions with combined code coverage using
-<a href="https://resources.github.com/learn/pathways/automation/">GitHub actions</a> and
-<a href="https://docs.astral.sh/uv/">uv</a>.</p>
-<h3 id="tldr"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#tldr">TLDR</a></h3>
-<p>I learnt how to setup a cross platform / cross Python version workflow with coverage
-while setting up the GitHub repo for my CLI tool
-<a href="https://github.com/owenlamont/uv-secure">uv-secure</a>. You can see the final GitHub
-action workflow I created for that project in
-<a href="https://github.com/owenlamont/uv-secure/blob/main/.github/workflows/pytest.yml">pytest.yml</a>
-but beware this workflow depends on some configuration specified in other files of this
-repo that I will go into in this post.</p>
-<h3 id="my-project-setup"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#my-project-setup">My project setup</a></h3>
-<p>I created my package using uv init with the lib option:</p>
-<pre><code class="language-shell">uv init --lib
-</code></pre>
-<p>To create the skeleton package directory structure. The default uv init command is more
-intended for creating scripts whereas if you want a Python project that will build and
-install as a package then you need the --lib option. You can read more detail in the
-<a href="https://docs.astral.sh/uv/reference/cli/#uv-init">uv init docs</a></p>
-<p>That creates a repo structure with a</p>
-<pre><code class="language-shell">src / package_name
-</code></pre>
-<p>structure, and I personally like to add a top level tests directory (you need to do this
-manually - uv won't create a tests directory for you) and then duplicate the directory
-structure for the src directory for my tests structure, e.g.</p>
-<pre><code class="language-shell">tests / package_name
-</code></pre>
-<h3 id="creating-initial-github-workflow"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#creating-initial-github-workflow">Creating initial GitHub workflow</a></h3>
-<p>The uv documentation has a specific section for
-<a href="https://docs.astral.sh/uv/guides/integration/github/#caching">GitHub integration</a>
-which I found to be an excellent starting point for setting up a GitHub action. I
-started by copying their
-<a href="https://docs.astral.sh/uv/guides/integration/github/#syncing-and-running">pytest example</a>
-and later tried to incorporate their other example of using
-<a href="https://docs.astral.sh/uv/guides/integration/github/#multiple-python-versions">multiple Python versions</a>.</p>
-<h4 id="first-gotcha-regarding-python-versions"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#first-gotcha-regarding-python-versions">First gotcha regarding Python versions</a></h4>
-<p>I made a few mistakes in my initial attempt to get multiple Python versions working that
-were a bit painful to figure out, specifically:</p>
-<p>I wanted to target Python 3.9 minimum and every major version after that up to Python
-3.13. Given I was targeting 3.9 minimum I had a .python-version file in my repo with the
-content:</p>
-<pre><code class="language-text">3.9
-</code></pre>
-<p>which I had checked into source control. I used the
-<a href="https://github.com/actions/setup-python">setup-python</a> action as the uv docs mentioned
-that can be faster for setting up Python and passed the Python version to that using the
-test matrix:</p>
-<pre><code class="language-yaml">- name: Set up Python
-  uses: actions/setup-python@v5
-  with:
-    python-version: ${{ matrix.python-version }}
-</code></pre>
-<p>I saw the setup-python action installing the correct Python, so I assumed it was running
-the tests against Python 3.9, 3.10, 3.11, 3.12, and 3.13... but unbeknownst to me uv was
-reading the .python-version file in each case and creating a Python 3.9 environment in
-each of the VMs even though actions/setup-python had installed the correct Python.</p>
-<p><img alt="Python version mismatch" src="../img/python_version_mismatch.png" /></p>
-<p>I didn't actually notice this issue until a later release when I tried to combine test
-coverage reports across my Python versions and noticed they were all giving identical
-results so coverage ignored all but one. The solution in this case was to remove the
-.python-version file from source control - I still kept a local copy but added it to the
-repo .gitignore file. Alternatively don't use the setup-python action and just follow
-the uv documentation example where uv installs Python itself.</p>
-<p>The more general learning I got was to take the time to inspect the action output more
-closely for each step as you can see from the screenshot the problem was easy to spot -
-but only if you expand and look at the detailed output for each step.</p>
-<h3 id="adding-code-coverage-support"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#adding-code-coverage-support">Adding Code Coverage Support</a></h3>
-<p>There's several SaaS services for taking output from
-<a href="https://pypi.org/project/coverage/">coverage</a> in Python and tracking test coverage over
-time such as <a href="https://about.codecov.io">Codecov</a> or <a href="https://coveralls.io">coveralls</a>
-both of which offer free (maybe with limitations) support for open source projects.
-However, I wanted to get some basic test coverage reporting that would work without
-using those services (yet) so I implemented some simpler action steps to take the
-coverage report from coverage and simply add that as a comment to the pull request.</p>
-<p>The configuration for those steps looked like this in the end:</p>
-<pre><code class="language-yaml">- name: Run coverage report
-  run:  uv run coverage report &gt; coverage_summary.txt
-- name: Prepare Comment Body
-  run: |
-    echo '### Coverage Report' &gt;&gt; comment_body.md
-    echo '```txt' &gt;&gt; comment_body.md
-    cat coverage_summary.txt &gt;&gt; comment_body.md
-    echo '' &gt;&gt; comment_body.md
-    echo '```' &gt;&gt; comment_body.md
-- name: Find Coverage Report Comment
-  id: find-comment
-  uses: peter-evans/find-comment@v3
-  with:
-    issue-number: ${{ github.event.pull_request.number }}
-    comment-author: github-actions[bot]
-    body-includes: '### Coverage Report'
-- name: Create or Update Coverage Comment
-  uses: peter-evans/create-or-update-comment@v4
-  with:
-    token: ${{ secrets.GITHUB_TOKEN }}
-    issue-number: ${{ github.event.pull_request.number }}
-    body-path: comment_body.md
-    comment-id: ${{ steps.find-comment.outputs.comment-id }}
-    edit-mode: replace
-</code></pre>
-<p>I had some trial and error and issues with the echo calls in the Prepare Comment Body
-step as I found I needed to use single tick quotes do get some of the echo calls to
-work (they would give really confusing errors with different quotes).</p>
-<p>I learnt of <a href="https://github.com/peter-evans">Peter Evan's</a> really handy actions for
-creating comments, although it took me a while to identify adding markdown comments
-worked best if saved to a file and added via the body-path argument in the
-create-or-update-comment action. I had many failed attempts trying to use ChatGPT's help
-to send the comment text via an environment variable that just caused so many issues.</p>
-<p>At first each change to a pull request would create a new coverage comment which got
-messy pretty quickly but Peter had a
-<a href="https://github.com/peter-evans/create-or-update-comment#where-to-find-the-id-of-a-comment">nice example</a>
-of combining his find-comment and create-or-update-comment actions so that you could
-create an initial comment for the test coverage and keep overwriting that same comment
-after that with new test coverage results as new commits were pushed to the PR.</p>
-<p>The last gotcha I ran into with using the create-or-update-comment action was the
-default job permissions aren't adequate for jobs to change the pull request itself so
-you need to explicitly set the job permissions like this:</p>
-<pre><code class="language-yaml">jobs:
-  my_job_name:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-</code></pre>
-<h3 id="adding-multi-python-version-coverage-report"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#adding-multi-python-version-coverage-report">Adding multi-Python version coverage report</a></h3>
-<p>I initially had multiple Python versions running and I just triggered test coverage for
-one of the Python versions as a separate step. This was unsatisfactory though as there
-was conditional importing happening in my package, e.g. toml parsing was added to the
-standard library in later versions of Python but earlier versions required you to
-import a separate package, e.g.</p>
-<pre><code class="language-python">if sys.version_info &gt;= (3, 11):
-    import tomllib as toml
-else:
-    import tomli as toml
-</code></pre>
-<p>and it was disappointing running coverage for just one Python version would always omit
-one of these import lines. I learnt Coverage.py CLI has a
-<a href="https://coverage.readthedocs.io/en/latest/cmd.html#cmd-combine">combine</a> command so you
-can run coverage for different environments and combine the results into a single
-coverage result.</p>
-<p>I had some initial misunderstandings around the combine command as I thought it might
-combine one of the output files from running coverage but it actually wants to combine
-the .coverage SQLLite db that coverage produces when running. Another gotcha that I ran
-into was when running coverage with an intent to combine results the coverage docs
-mention using the:</p>
-<pre><code class="language-shell">--parallel-mode
-</code></pre>
-<p>option or configuration to name the .coverage to include extra details to ensure each
-.coverage file is named uniquely and I tried to follow that advice. I had an issue
-since I was using the <a href="https://pypi.org/project/pytest-cov/">pytest-cov</a> package to
-integrate pytest with coverage to run the tests with coverage, and it appears to set
-the parallel option for
-<a href="https://pytest-cov.readthedocs.io/en/latest/config.html#configuration">its own purposes</a>
-so my attempts at setting that configuration never seemed to change the name of the
-.coverage output db.</p>
-<p>One possible solution would be to get coverage to run pytest without using pytest-cov (
-although if you use the coverage feature in recent versions of the VSCode Python
-extension that depends on pytest-cov so you may want to keep that dependency even if you
-don't use it in CI).</p>
-<p>In the end though it wasn't an issue because each test matrix instance runs in its own
-VM so you don't need to worry about .coverage files overwriting each other - as long as
-you use the upload-artifact action to upload them with different names there's no issue.</p>
-<p>In the test run step I used the upload-artifact like so:</p>
-<pre><code class="language-yaml">- name: Upload coverage artifact
-  uses: actions/upload-artifact@v4
-  with:
-    name: coverage-${{ matrix.python-version }}
-    path: .coverage
-    include-hidden-files: true
-</code></pre>
-<p>and a separate dependant job would collect and combine those individual test artifacts
-like so:</p>
-<pre><code class="language-yaml">- name: Download all coverage artifacts
-  uses: actions/download-artifact@v4
-  with:
-    path: coverage
-- name: Combine coverage data
-  run: |
-    uv run coverage combine coverage/3.*/.coverage
-    uv run coverage report &gt; coverage_summary.txt
-</code></pre>
-<h3 id="final-step-adding-multiple-platform-coverage-support"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#final-step-adding-multiple-platform-coverage-support">Final step - adding multiple platform coverage support</a></h3>
-<p>In the same way I had conditional imports that imported different libraries depending on
-the Python version - I also ended up needing conditional imports to handle different
-operating system specific dependencies, e.g. for optimised async event loops
-<a href="https://pypi.org/project/uvloop/">uvloop</a> is often recommended but that only works on
-Linux and macOS (and I hate it when Windows is neglected by Python packages since that
-is the OS I work in the most). Once again I need a different conditional import on
-Windows instead of uvloop I use <a href="https://pypi.org/project/winloop/">winloop</a> and the
-code looks like this:</p>
-<pre><code class="language-python">if sys.platform in (&quot;win32&quot;, &quot;cygwin&quot;, &quot;cli&quot;):
-    from winloop import run
-else:
-    from uvloop import run
-</code></pre>
-<p>If you're interested the project dependencies section of my pyproject.toml for handling
-those different import conditions looks like this:</p>
-<pre><code class="language-toml">dependencies = [
-    'tomli; python_version &lt; &quot;3.11&quot;',
-    &quot;uvloop&gt;=0.21.0 ; sys_platform != 'win32'&quot;,
-    &quot;winloop&gt;=0.1.7 ; sys_platform == 'win32'&quot;,
-]
-</code></pre>
-<p>so now the next issue is the GitHub matrix must be expanded to cover Linux, macOS, and
-Windows and all the major Python versions which now looks like this:</p>
-<pre><code class="language-yaml">name: Pytest
-on:
-  pull_request:
-jobs:
-  pytest-with-coverage:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [&quot;ubuntu-latest&quot;, &quot;macos-latest&quot;, &quot;windows-latest&quot;]
-        python-version: [&quot;3.9&quot;, &quot;3.10&quot;, &quot;3.11&quot;, &quot;3.12&quot;, &quot;3.13&quot;]
-</code></pre>
-<p>One minor gotcha is don't forget to quote the Python version numbers - I tried unquoted
-versions and Python 3.10 was trying to install Python 3.1!</p>
-<p>The big gotcha happened though when I tried my old run the combine across my
-multi-platform artifacts. The tests and individual coverage ran just fine but the
-combine step returned an error status code but no meaningful / actionable error. I spent
-a lot of time trying to reproduce the combine problem locally with the CI generated
-artifacts and adding extra temporary debug steps into the pipeline before I determined
-the issue was each GitHub CI ran the tests in a different relative path in their
-respective VMs and coverage didn't recognise these different source paths as being the
-same. Specifically the VM specific paths were:</p>
-<ul>
-<li>ubuntu-latest ran in: /home/runner/work/<repo_name></li>
-<li>macos-latest ran in: /Users/runner/work/<repo_name></li>
-<li>windows-latest ran in: D:/a/<repo_name></li>
-</ul>
-<p>I had run into this coverage directory mapping issue before when trying to run coverage
-in PyCharm with a Docker environment because of the different (and very non-obvious)
-absolute paths it creates for the same project directory.</p>
-<p>In short though you need to configure coverage to recognise all these absolute
-directories as the same path. Which I did in the pyproject.toml like so:</p>
-<pre><code class="language-toml">[tool.coverage.paths]
-source = [
-  &quot;src&quot;,
-  &quot;/Users/runner/work/uv-secure/uv-secure/src&quot;,
-  &quot;/home/runner/work/uv-secure/uv-secure/src&quot;,
-  &quot;D:/a/uv-secure/uv-secure/src&quot;
-]
-tests = [
-  &quot;tests&quot;,
-  &quot;/Users/runner/work/uv-secure/uv-secure/tests&quot;,
-  &quot;/home/runner/work/uv-secure/uv-secure/tests&quot;,
-  &quot;D:/a/uv-secure/uv-secure/tests&quot;
-]
-</code></pre>
-<p>You can read about other ways to configure these path mappings for coverage in its
-<a href="https://coverage.readthedocs.io/en/latest/config.html#paths">path docs</a></p>
-<p>Finally after all that trial and error I was able to get a single coverage report
-workflow that covered all the major OSes and Python versions I wanted to cover.</p>
-<h3 id="related-work-and-summary"><a class="toclink" href="2024/12/29/testing-a-python-package-on-github/#related-work-and-summary">Related work and Summary</a></h3>
-<p>By chance while developing this I did discover the
-<a href="https://github.com/fpgmaas/cookiecutter-uv/">cookiecutter-uv</a> repo which covers a lot
-of the same issues (but doesn't as far as I can see deal with combining the code
-coverage).</p>
-<p>Feel free to look at and re-use the final workflow file in your own repos which is here
-<a href="https://github.com/owenlamont/uv-secure/blob/main/.github/workflows/pytest.yml">pytest.yml</a></p>
-<p>I leaned on ChatGPT a lot which was good at suggesting the initial workflow
-configuration and it helped a lot with diagnosing the action output (by pasting it the
-workflow yaml and the actual action log output) - but it definitely lead me into some
-deadends where I needed to research and solve the problem myself (like the proper way
-to use the create-or-update-comment action).</p>
-<p>I've definitely found developing GitHub actions/workflows a bit painful as I spam push
-commits with lots of trial and error until I get them to work right. I haven't tried but
-have heard of the <a href="https://github.com/nektos/act">act tool</a> that can apparently let you
-test GitHub actions locally before pushing them. I'd be interested to hear how well that
-has worked for other developers and what limitations it might have.</p>
-    
-  </div>
-</article>
+    <article class="md-content__inner md-typeset">
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-11-20 00:00:00+00:00">November 20, 2023</time></li>
         
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/maritime/" class="md-meta__link">Maritime</a>, 
-              <a href="category/data-visualisation/" class="md-meta__link">Data Visualisation</a>, 
-              <a href="category/python/" class="md-meta__link">Python</a>, 
-              <a href="category/matplotlib/" class="md-meta__link">Matplotlib</a>, 
-              <a href="category/geopandas/" class="md-meta__link">GeoPandas</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="plotting-australian-maritime-safety-authority-vessel-positions"><a class="toclink" href="2023/11/20/plotting-australian-maritime-safety-authority-vessel-positions/">Plotting Australian Maritime Safety Authority Vessel Positions</a></h2>
-<h3 id="plotting-australian-maritime-safety-authority-vessel-positions_1"><a class="toclink" href="2023/11/20/plotting-australian-maritime-safety-authority-vessel-positions/#plotting-australian-maritime-safety-authority-vessel-positions_1">Plotting Australian Maritime Safety Authority Vessel Positions</a></h3>
-<h4 id="heatmap-of-log-scaled-ship-positions-for-over-a-decade"><a class="toclink" href="2023/11/20/plotting-australian-maritime-safety-authority-vessel-positions/#heatmap-of-log-scaled-ship-positions-for-over-a-decade">Heatmap of log scaled ship positions for over a decade</a></h4>
-<p><img alt="Martime Vessel Position Heatmap" src="../img/ship_movement_heatmap_2048_1536_kbc.webp" /></p>
-<h4 id="one-frame-of-the-ship-movement-animation"><a class="toclink" href="2023/11/20/plotting-australian-maritime-safety-authority-vessel-positions/#one-frame-of-the-ship-movement-animation">One frame of the ship movement animation</a></h4>
-<p><img alt="Maritime Vessel Positions" src="../img/amsa_vessel_locations.webp" /></p>
-<p>The Australian Maritime Safety Authority
-<a href="https://www.operations.amsa.gov.au/Spatial/DataServices/DigitalData">Digital Data website</a>
-has maritime vessel positions dating back over two decades. I love working with data
-that has a spatial and visual component as this sort of data is fun to visualise and
-easy to understand.</p>
-<p>In this post I was going to share some tooling I created to make it easier to download
-and work with.</p>
-<p>The main pain points I found working with this data is that it is difficult to easily
-pull down in bulk (since the webpage requires you accepting terms for each file you
-download) and the files you download are double-nested zip files containing a shape
-file. When I first worked with this data a few years ago I downloaded many years of it
-one month worth at a time and hand-extracted the zip files but it was onerous. This time
-I've prepared two scripts which I've saved in my
-<a href="https://github.com/owenlamont/scrape_amsa_vessel_positions">scrape_amsa_vessel_positions repo</a>
-, one to download all the zip files, and a second script to open the shape file in each
-double nested zip file and re-save it as a geo-parquet file. Both scripts by default
-only download and extract new data so you don't need to worry about re-running them.</p>
-<p>Once you have a full directory of geoparquet files its very simple to open all the
-parquet files and concatenate them into a single <a href="https://geopandas.org/en/stable/">GeoPandas</a>
-dataframe if you like (beware this will consume tens of gigabytes of RAM if you try to
-combine the full history though).</p>
-<p>There's a few ways to visualise this data once you've collected it. I like leveraging
-the Matplotlib integration with <a href="https://ffmpeg.org">FFmpeg</a> to create mp4 movies over
-time. Another easy way to visualise this data on a static image which looks really
-pretty is to create a heatmap with the <a href="https://datashader.org">Datashader package</a>.</p>
-<p>Some of my different visualisations of this data I'll showcase in the
-<a href="https://github.com/owenlamont/visualise_amsa_vessel_positions">visualise_amsa_vessel_positions repo</a></p>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-09-19 00:00:00+00:00">September 19, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/conda/" class="md-meta__link">Conda</a>, 
-              <a href="category/virtual-environments/" class="md-meta__link">Virtual Environments</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              11 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="python-conda-environments-the-sharp-edges-and-how-to-avoid-them"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/">Python Conda environments - The Sharp Edges and How to Avoid Them</a></h2>
-<h3 id="conda-is-awesome"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#conda-is-awesome">Conda is awesome</a></h3>
+
+
+  <h1>Python Conda environments - The Sharp Edges and How to Avoid Them</h1>
+
+<h2 id="conda-is-awesome">Conda is awesome</h2>
 <p>I'm a huge fan of Conda. If you work with Python packages that wrap or bind to
 applications or libraries written in other languages Conda is a fantastic way to install
 them as it not only installs the Python package but the application or library and the
@@ -1172,12 +999,12 @@ management hell and give you back many hours of your life. You can even use it a
 cross platform app installer too, for example installing and updating the popular
 <a href="https://anaconda.org/conda-forge/qgis">QGIS</a> application. Who needs Chocolatey,
 Homebrew, or apt-get when you have Conda.</p>
-<h3 id="but-conda-can-still-burn-you"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#but-conda-can-still-burn-you">But Conda can still burn you</a></h3>
+<h2 id="but-conda-can-still-burn-you">But Conda can still burn you</h2>
 <p>Despite being more idiot-proof and much faster than most methods for installing packages
 with complex dependencies there are unfortunately still quite a few ways to trip up when
 using Conda so I wanted to cover some gotchas and hopefully spare others some of the
 pain I've experienced using Conda environments.</p>
-<h3 id="even-with-best-practises-conda-environments-will-break-anyway-but-much-less-often"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#even-with-best-practises-conda-environments-will-break-anyway-but-much-less-often">Even with best practises Conda environments will break anyway (but much less often)</a></h3>
+<h2 id="even-with-best-practises-conda-environments-will-break-anyway-but-much-less-often">Even with best practises Conda environments will break anyway (but much less often)</h2>
 <p>Even if you follow all my recommendations your Conda environments will break sooner or
 later if you keep upgrading them. It's unfortunate but package authors are human and
 dependency management is hard. Occasionally a package will be released with a bug that
@@ -1192,7 +1019,7 @@ used to work in that environment now break and error out.</p>
 <p>It's not all bad news though, there's several strategies to restoring a broken
 environment which I'll cover next and if you're patient sometimes the package bugs or
 dependency issues will be fixed for you next time you do an update.</p>
-<h4 id="record-your-environment-configuration"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#record-your-environment-configuration">Record your environment configuration</a></h4>
+<h3 id="record-your-environment-configuration">Record your environment configuration</h3>
 <p>My first practise when creating a new Conda environment is to document the packages I
 install. You can extract the package list after the fact using Conda's export option to
 <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#id15">save a Yaml file</a>
@@ -1211,7 +1038,7 @@ you used to create your environment should worst case you need to reinstall it (
 recreate it on a new computer) to a document (I use a Google doc). Remember if you
 install additional packages into your environment at a later time to go back and update
 this document.</p>
-<p><img alt="Screenshot" src="../img/google_doc_conda.png" /></p>
+<p><img alt="Screenshot" src="../../../../../img/google_doc_conda.png" /></p>
 <p>Part of the reason I use a document rather than just export the Conda environment is I
 use Jupyter Lab in a lot of my environments so I want to record the additional commands
 for installing and enabling the Jupyter Lab extensions should I need to recreate the
@@ -1222,7 +1049,7 @@ one with the Python package). This environment document becomes my ultimate fall
 my Conda environment breaks and I need to delete and reinstall the whole environment,
 but before resorting to reinstalling if an update has broken your environment there's
 some faster strategies to try first that will probably get things working again.</p>
-<h4 id="restoring-a-broken-conda-environment"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#restoring-a-broken-conda-environment">Restoring a broken Conda environment</a></h4>
+<h3 id="restoring-a-broken-conda-environment">Restoring a broken Conda environment</h3>
 <p>Conda actually maintains a list of revisions to your environment each time you install a
 new package or update some existing packages. At any point if things go wrong you can
 revert to an earlier version of your environment. This is something I hadn't known about
@@ -1237,7 +1064,7 @@ It is quite straight-forward to use:</p>
 <li>state and there's a chance it won't fix a bad update but it's probably the first thing</li>
 <li>to try if you notice you've gotten a bad update.</li>
 </ul>
-<h4 id="pinning-and-installing-a-specific-package-version"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#pinning-and-installing-a-specific-package-version">Pinning and installing a specific package version</a></h4>
+<h3 id="pinning-and-installing-a-specific-package-version">Pinning and installing a specific package version</h3>
 <p>Another option if you've been unlucky enough to update to a broken version of a
 particular package is to revert that specific package. You can use the same conda list
 --revisions command to see what the version of the package was when it was last working
@@ -1247,12 +1074,12 @@ could:</p>
 <pre><code class="language-shell">conda install pandas=0.25.3
 </code></pre>
 <p>To revert back to the previous Pandas version.</p>
-<h3 id="tips-to-make-conda-environments-break-less-often"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#tips-to-make-conda-environments-break-less-often">Tips to make Conda Environments break less often</a></h3>
+<h2 id="tips-to-make-conda-environments-break-less-often">Tips to make Conda Environments break less often</h2>
 <p>I've covered a few options to handle Conda environments breaking and I did that first as
 it is only a question of when and not if it will happen. There are other steps you can
 take though to reduce the chances of environments getting into a broken state in the
 first place though which I'll cover next.</p>
-<h4 id="keep-your-environments-simple"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#keep-your-environments-simple">Keep your environments simple</a></h4>
+<h3 id="keep-your-environments-simple">Keep your environments simple</h3>
 <p>As I mentioned earlier the more packages you install in one environment and the more
 often you update them the odds of that environment imploding get uncomfortably high. I
 have (more than once) gotten over enthusiastic with installing every cool sounding
@@ -1272,7 +1099,7 @@ trouble pretty quickly. Keep your environments simple, as a general rule don't u
 the base Anaconda environment (with the exception of the conda package itself which is
 recommended) and if you don't need to update your environment leave it be (I am a
 compulsive upgrader though which is why I have run into this pain point multiple times).</p>
-<h4 id="enable-channel-priority-strict"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#enable-channel-priority-strict">Enable channel priority strict</a></h4>
+<h3 id="enable-channel-priority-strict">Enable channel priority strict</h3>
 <p>I didn't know about this option until I read the
 <a href="https://conda-forge.org/">conda-forge instructions</a> more carefully but enabling strict
 channel priority by running this command:</p>
@@ -1302,10 +1129,10 @@ what you did when you created it). If you know a package is pure Python that sho
 safe to install regardless of what channel it comes from, but for packages that contain
 compiled libraries it is riskier to install them from different channels into the same
 environment.</p>
-<h3 id="other-things-to-be-wary-of-with-conda"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#other-things-to-be-wary-of-with-conda">Other things to be wary of with Conda</a></h3>
+<h2 id="other-things-to-be-wary-of-with-conda">Other things to be wary of with Conda</h2>
 <p>That covers most of the important points but there's a few other less common issues I've
 encountered which I'll quickly go over in case anyone runs into these.</p>
-<h4 id="mixing-pip-and-conda-packages"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#mixing-pip-and-conda-packages">Mixing Pip and Conda packages</a></h4>
+<h3 id="mixing-pip-and-conda-packages">Mixing Pip and Conda packages</h3>
 <p>If you encounter a package on PyPi that doesn't exist on any Conda channel it is
 possible to pip install it into a Conda environment. I generally try to avoid this but
 if you do need to do it I believe the recommended approach is to create your Conda
@@ -1320,7 +1147,7 @@ any feedback from other coders that have done this). I'd also mention if a PyPi 
 is pure Python it isn't very difficult to convert that to a Conda package (conda-forge
 has some good tools with tutorials and examples for doing this) so if you find a popular
 PyPi package that isn't on a Conda channel please consider converting it yourself.</p>
-<h4 id="write-permissions-on-the-working-directory-on-windows"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#write-permissions-on-the-working-directory-on-windows">Write permissions on the working directory on Windows</a></h4>
+<h3 id="write-permissions-on-the-working-directory-on-windows">Write permissions on the working directory on Windows</h3>
 <p>One issue I've encountered on corporate Windows machines (Anaconda/Miniconda can install
 to the user local directory and don't need local system admin in that case) is that when
 installing or updating I noticed some packages download temporary files to the working
@@ -1331,13 +1158,13 @@ noticed (I had to use the Windows dev tools to diagnose the problem) but would j
 frozen on the package installing... My fix was to edit the Anaconda console shortcut to
 default to the user local directory instead of root C drive. This issue occurred a while
 ago and may be fixed now.</p>
-<h4 id="dll-hell-on-windows"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#dll-hell-on-windows">DLL hell on Windows</a></h4>
+<h3 id="dll-hell-on-windows">DLL hell on Windows</h3>
 <p>Another issue I found on Windows was DLL name clashes with Numpy which would happen
 every time I tried to import Numpy from a script run from the Anaconda console. The fix
 I found in that case was to set the CONDA_DLL_SEARCH_MODIFICATION_ENABLE environment
 variable to 1 - you can Google that environment variable and read about related fixes in
 the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/troubleshooting.html#numpy-mkl-library-load-failed">Conda troubleshooting guide</a>.</p>
-<h4 id="adding-a-path-directly-to-a-conda-environment-on-windows-dont-do-this"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#adding-a-path-directly-to-a-conda-environment-on-windows-dont-do-this">Adding a Path directly to a Conda environment on Windows (Don't do this!)</a></h4>
+<h3 id="adding-a-path-directly-to-a-conda-environment-on-windows-dont-do-this">Adding a Path directly to a Conda environment on Windows (Don't do this!)</h3>
 <p>Before I had a good answer to the DLL problem in the previous point a quick and dirty
 work-around was to manually add the Conda environment binary and script directories to
 my Windows Path (Anaconda/Miniconda will even offer to add the base environment to the
@@ -1359,14 +1186,14 @@ PYTHONPATH environment variable to your system environment variables (that is no
 than adding an environments binary paths to the system Path variable) - make sure the
 PYTHONPATH is configured by your IDE or within your terminal session - not permanently
 as a system environment variable.</p>
-<h4 id="other-issues"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#other-issues">Other issues</a></h4>
+<h3 id="other-issues">Other issues</h3>
 <p>If a Conda install or update fails for other reasons it will normally provide you a link
 to a log file where you can find the specific details. I've had issues where some Conda
 packages depended on git being installed and I only noticed that from the log file. You
 can always fallback to the age old technique of Googling the exact error message as it
 appears in the terminal or log file and also check the troubleshooting guide mentioned
 above if you encounter anything else.</p>
-<h3 id="conclusion"><a class="toclink" href="2020/09/19/python-conda-environments---the-sharp-edges-and-how-to-avoid-them/#conclusion">Conclusion</a></h3>
+<h2 id="conclusion">Conclusion</h2>
 <p>I hope this advice helps. I refer back to the Conda documentation often. If you find
 what appear to be bugs in Conda itself please do raise them on the
 <a href="https://github.com/conda/conda">Conda GitHub page</a>. If you like Conda you can follow
@@ -1376,22 +1203,25 @@ himself as he occasionally responds directly to user questions.</p>
 <p>If you spot any mistakes in my guide or have any experiences with Conda environments you
 think are useful to share feel free to message me from one of the links below. I'm
 always keen to learn more and share what I learn as I go.</p>
-    
-  </div>
-</article>
-      
-      
-        
-          
 
 
 
-<nav class="md-pagination">
+
+
+
+
   
-</nav>
-        
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -1493,10 +1323,10 @@ always keen to learn more and share what I learn as I go.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
