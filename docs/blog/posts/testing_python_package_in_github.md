@@ -55,7 +55,7 @@ tests / package_name
 ## Creating initial GitHub workflow
 
 The uv documentation has a specific section for
-[GitHub integration](https://docs.astral.sh/uv/guides/integration/github/#caching)
+[GitHub integration](https://docs.astral.sh/uv/guides/integration/github)
 which I found to be an excellent starting point for setting up a GitHub action. I
 started by copying their
 [pytest example](https://docs.astral.sh/uv/guides/integration/github/#syncing-and-running)
@@ -151,8 +151,9 @@ work (they would give really confusing errors with different quotes).
 I learnt of [Peter Evan's](https://github.com/peter-evans) really handy actions for
 creating comments, although it took me a while to identify adding markdown comments
 worked best if saved to a file and added via the body-path argument in the
-create-or-update-comment action. I had many failed attempts trying to use ChatGPT's help
-to send the comment text via an environment variable that just caused so many issues.
+[create-or-update-comment](https://github.com/peter-evans/create-or-update-comment)
+action. I had many failed attempts trying to use ChatGPT's help to send the comment text
+via an environment variable that just caused so many issues.
 
 At first each change to a pull request would create a new coverage comment which got
 messy pretty quickly but Peter had a
@@ -349,10 +350,10 @@ Feel free to look at and re-use the final workflow file in your own repos which 
 [pytest.yml](https://github.com/owenlamont/uv-secure/blob/main/.github/workflows/pytest.yml)
 
 I leaned on ChatGPT a lot which was good at suggesting the initial workflow
-configuration and it helped a lot with diagnosing the action output (by pasting it the
-workflow yaml and the actual action log output) - but it definitely lead me into some
-deadends where I needed to research and solve the problem myself (like the proper way
-to use the create-or-update-comment action).
+configuration, and it helped a lot with diagnosing the action output (by pasting in the
+workflow yaml and the actual action log output) - but ChatGPT definitely lead me into
+some dead ends where I needed to research and solve the problem myself (like the proper
+way to use the create-or-update-comment action).
 
 I've definitely found developing GitHub actions/workflows a bit painful as I spam push
 commits with lots of trial and error until I get them to work right. I haven't tried but
