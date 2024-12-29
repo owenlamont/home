@@ -817,7 +817,7 @@ structure for the src directory for my tests structure, e.g.</p>
 </code></pre>
 <h3 id="creating-initial-github-workflow"><a class="toclink" href="../../2024/12/29/testing-a-python-package-on-github/#creating-initial-github-workflow">Creating initial GitHub workflow</a></h3>
 <p>The uv documentation has a specific section for
-<a href="https://docs.astral.sh/uv/guides/integration/github/#caching">GitHub integration</a>
+<a href="https://docs.astral.sh/uv/guides/integration/github">GitHub integration</a>
 which I found to be an excellent starting point for setting up a GitHub action. I
 started by copying their
 <a href="https://docs.astral.sh/uv/guides/integration/github/#syncing-and-running">pytest example</a>
@@ -894,8 +894,9 @@ work (they would give really confusing errors with different quotes).</p>
 <p>I learnt of <a href="https://github.com/peter-evans">Peter Evan's</a> really handy actions for
 creating comments, although it took me a while to identify adding markdown comments
 worked best if saved to a file and added via the body-path argument in the
-create-or-update-comment action. I had many failed attempts trying to use ChatGPT's help
-to send the comment text via an environment variable that just caused so many issues.</p>
+<a href="https://github.com/peter-evans/create-or-update-comment">create-or-update-comment</a>
+action. I had many failed attempts trying to use ChatGPT's help to send the comment text
+via an environment variable that just caused so many issues.</p>
 <p>At first each change to a pull request would create a new coverage comment which got
 messy pretty quickly but Peter had a
 <a href="https://github.com/peter-evans/create-or-update-comment#where-to-find-the-id-of-a-comment">nice example</a>
@@ -1050,10 +1051,10 @@ coverage).</p>
 <p>Feel free to look at and re-use the final workflow file in your own repos which is here
 <a href="https://github.com/owenlamont/uv-secure/blob/main/.github/workflows/pytest.yml">pytest.yml</a></p>
 <p>I leaned on ChatGPT a lot which was good at suggesting the initial workflow
-configuration and it helped a lot with diagnosing the action output (by pasting it the
-workflow yaml and the actual action log output) - but it definitely lead me into some
-deadends where I needed to research and solve the problem myself (like the proper way
-to use the create-or-update-comment action).</p>
+configuration, and it helped a lot with diagnosing the action output (by pasting in the
+workflow yaml and the actual action log output) - but ChatGPT definitely lead me into
+some dead ends where I needed to research and solve the problem myself (like the proper
+way to use the create-or-update-comment action).</p>
 <p>I've definitely found developing GitHub actions/workflows a bit painful as I spam push
 commits with lots of trial and error until I get them to work right. I haven't tried but
 have heard of the <a href="https://github.com/nektos/act">act tool</a> that can apparently let you
