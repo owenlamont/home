@@ -13,11 +13,12 @@ I'm quite new both to building Python packages and also to GitHub actions so her
 describe setting up a workflow to run tests on a Python package across Windows, Ubuntu,
 and macOS and across multiple Python versions with combined code coverage using
 [GitHub actions](https://resources.github.com/learn/pathways/automation/) and
-[uv](https://docs.astral.sh/uv/).
+[uv](https://docs.astral.sh/uv/). I describe all the trial and error and mistakes I
+encountered with the hopes it can save others some time.
 
 ## TLDR
 
-I learnt how to setup a cross platform / cross Python version workflow with coverage
+I learnt how to set up a cross-platform / cross Python version workflow with coverage
 while setting up the GitHub repo for my CLI tool
 [uv-secure](https://github.com/owenlamont/uv-secure). You can see the final GitHub
 action workflow I created for that project in
