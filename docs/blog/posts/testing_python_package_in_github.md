@@ -198,7 +198,7 @@ can run coverage for different environments and combine the results into a singl
 coverage result.
 
 I had some initial misunderstandings around the combine command as I thought it might
-combine one of the output files from running coverage but it actually wants to combine
+combine one of the output files from running coverage, but it actually wants to combine
 the .coverage SQLLite db that coverage produces when running. Another gotcha that I ran
 into was when running coverage with an intent to combine results the coverage docs
 mention using the:
@@ -210,10 +210,10 @@ mention using the:
 option or configuration to name the .coverage to include extra details to ensure each
 .coverage file is named uniquely and I tried to follow that advice. I had an issue
 since I was using the [pytest-cov](https://pypi.org/project/pytest-cov/) package to
-integrate pytest with coverage to run the tests with coverage, and it appears to set
-the parallel option for
+integrate pytest with coverage to run the tests with coverage, and pytest-cov appears to
+set the parallel option for
 [its own purposes](https://pytest-cov.readthedocs.io/en/latest/config.html#configuration)
-so my attempts at setting that configuration never seemed to change the name of the
+so my attempts at enabling parallel mode never seemed to change the name of the
 .coverage output db.
 
 One possible solution would be to get coverage to run pytest without using pytest-cov (
@@ -250,6 +250,10 @@ like so:
     uv run coverage report > coverage_summary.txt
 ```
 
+The include-hidden-files argument for upload-artifact was another gotcha as by default
+upload-artifact won't upload _hidden_ files - such as those with a period prefix so to
+get .coverage to upload you need to set that to true.
+
 ## Final step - adding multiple platform coverage support
 
 In the same way I had conditional imports that imported different libraries depending on
@@ -269,7 +273,7 @@ else:
 ```
 
 If you're interested the project dependencies section of my pyproject.toml for handling
-those different import conditions looks like this:
+those platform specific dependencies looks like this:
 
 ```toml
 dependencies = [
@@ -298,12 +302,12 @@ jobs:
 One minor gotcha is don't forget to quote the Python version numbers - I tried unquoted
 versions and Python 3.10 was trying to install Python 3.1!
 
-The big gotcha happened though when I tried my old run the combine across my
+The big gotcha happened though when I tried the step to combine the .coverage across my
 multi-platform artifacts. The tests and individual coverage ran just fine but the
 combine step returned an error status code but no meaningful / actionable error. I spent
 a lot of time trying to reproduce the combine problem locally with the CI generated
 artifacts and adding extra temporary debug steps into the pipeline before I determined
-the issue was each GitHub CI ran the tests in a different relative path in their
+the issue was each GitHub CI ran the tests in a different absolute paths in their
 respective VMs and coverage didn't recognise these different source paths as being the
 same. Specifically the VM specific paths were:
 
@@ -315,8 +319,8 @@ I had run into this coverage directory mapping issue before when trying to run c
 in PyCharm with a Docker environment because of the different (and very non-obvious)
 absolute paths it creates for the same project directory.
 
-In short though you need to configure coverage to recognise all these absolute
-directories as the same path. Which I did in the pyproject.toml like so:
+In short, you need to configure coverage to recognise all these absolute directories as
+the same path. Which I did in the pyproject.toml like so:
 
 ```toml
 [tool.coverage.paths]
@@ -338,7 +342,10 @@ You can read about other ways to configure these path mappings for coverage in i
 [path docs](https://coverage.readthedocs.io/en/latest/config.html#paths)
 
 Finally after all that trial and error I was able to get a single coverage report
-workflow that covered all the major OSes and Python versions I wanted to cover.
+workflow that covered all the major OSes and Python versions I wanted to cover. The
+coverage comment renders like this:
+
+![Python version mismatch](../../img/coverage_comment.png)
 
 ## Related work and Summary
 
@@ -346,6 +353,10 @@ By chance while developing this I did discover the
 [cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv/) repo which covers a lot
 of the same issues (but doesn't as far as I can see deal with combining the code
 coverage).
+
+I know the [tox](https://pypi.org/project/tox/) and [nox](https://pypi.org/project/nox/)
+tools are often used for testing across multiple Python versions. I don't have
+experience with them though, or know how they could be best integrated into GitHub CI.
 
 Feel free to look at and re-use the final workflow file in your own repos which is here
 [pytest.yml](https://github.com/owenlamont/uv-secure/blob/main/.github/workflows/pytest.yml)
