@@ -6,6 +6,7 @@ categories: [Conda, Virtual Environments]
 title: Python Conda environments - The Sharp Edges and How to Avoid Them
 date: 2020-09-19
 ---
+
 ## Conda is awesome
 
 I'm a huge fan of Conda. If you work with Python packages that wrap or bind to

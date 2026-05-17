@@ -6,6 +6,7 @@ categories: [Maritime, Data Visualisation, Python, Matplotlib, GeoPandas, Moving
 title: Plotting Australian Maritime Safety Authority Vessel Positions
 date: 2023-11-20
 ---
+
 ## Plotting Australian Maritime Safety Authority Vessel Positions
 
 ### Heatmap of log scaled ship positions for over a decade

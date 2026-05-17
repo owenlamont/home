@@ -1,0 +1,51 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+hooks = [
+  { id = "trailing-whitespace" },
+  { id = "end-of-file-fixer" },
+  { id = "check-case-conflict" },
+  { id = "destroyed-symlinks" },
+  { id = "check-illegal-windows-names" },
+  { id = "check-merge-conflict" },
+  { id = "check-symlinks" },
+  { id = "check-yaml" },
+  { id = "check-toml" },
+  { id = "check-xml" },
+  {
+    id = "check-added-large-files",
+    args = ["--maxkb=1024"]
+  },
+  {
+    id = "mixed-line-ending",
+    args = ["--fix=lf"]
+  }
+]
+
+[[repos]]
+repo = "https://github.com/rvben/rumdl-pre-commit"
+rev = "v0.1.91"
+hooks = [
+  { id = "rumdl" }
+]
+
+[[repos]]
+repo = "https://github.com/adhtruong/mirrors-typos"
+rev = "v1.46.0"
+hooks = [
+  {
+    id = "typos",
+    args = ["--force-exclude"]
+  }
+]
+
+[[repos]]
+repo = "https://github.com/owenlamont/ryl-pre-commit"
+rev = "v0.9.1"
+hooks = [
+  { id = "ryl" }
+]
